@@ -912,3 +912,43 @@
 .dstdCon_wrap {
     margin-top: 90px;
 }
+
+
+/* vip */
+.list{
+    padding-bottom: 20px;
+    text-align: center;
+}
+.list .list_block{
+    display: inline-block;
+    width: 188px;
+    padding: 20px 10px;
+    background-color: #efefef;
+    height: 300px;
+    vertical-align: middle;
+}
+.list .list_block.max-width{
+    width: 450px;
+}
+.list .list_block .list_title{
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.list .list_block .list_content{
+    color: #000;
+    font-size: 14px;
+    line-height: 2;
+    text-align: left;
+}
+
+.list .list_block.red{
+    background-color: #ea433a;
+}
+
+.list .list_block.red .list_title,.list .list_block.red .list_content{
+    color: #fff;
+}
