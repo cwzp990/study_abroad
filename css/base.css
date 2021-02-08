@@ -1,0 +1,449 @@
+﻿/***css reset***/
+.main_body, .Nwbg {
+    background: #f3f3f3;
+    min-width: 1200px;
+}
+
+.bavgg {
+    background: #FFF;
+}
+
+.lebavgg {
+    background: #fafafa;
+}
+
+html {
+    overflow-y: scroll;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+blockquote, html, body, div, ul, ol, li, dl, dt, dd, fieldset, form, h1, h2, h3, h4, h5, h6, hr, legend, pre, p, td, th, textarea, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select, textarea {
+    color: #000;
+    font: 12px/1.5 myFirstFont;
+}
+
+body {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+address, caption, code, cite, dfn, em, var {
+    font-style: normal;
+    font-weight: 500;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input[type=button] {
+    -webkit-appearance: none;
+}
+
+input[type=button], input[type=checkbox], input[type=radio] {
+    outline: none;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset, img {
+    border: 0 none;
+}
+
+img, input {
+    vertical-align: middle;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    vertical-align: middle;
+    outline: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    text-align: inherit;
+}
+
+iframe {
+    display: block;
+}
+
+s {
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+/*placeholder*/
+:-moz-placeholder {
+    color: #8f8f8f;
+}
+
+/* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {
+    color: #8f8f8f;
+}
+
+/* Mozilla Firefox 19+ */
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #d6d6d6;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #d6d6d6;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+
+input::-webkit-input-placeholder {
+    vertical-align: middle;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-text-fill-color: #333;
+}
+
+/* 1 通用样式--------------------------------------------------------------------------*/
+/***common class***/
+.clearfix {
+    *zoom: 1
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+!important
+}
+
+.left {
+    float: left;
+    _display: inline;
+}
+
+.right {
+    float: right;
+    _display: inline;
+}
+
+.inline {
+    display: inline;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+/*common margin*/
+.mgt5 {
+    margin-top: 5px;
+}
+
+.mgt7 {
+    margin-top: 7px;
+}
+
+.mgt10 {
+    margin-top: 10px;
+}
+
+.mgt15 {
+    margin-top: 15px;
+}
+
+.mgt20 {
+    margin-top: 20px;
+}
+
+.mgt25 {
+    margin-top: 25px;
+}
+
+.mgt30 {
+    margin-top: 30px;
+}
+
+.mgt40 {
+    margin-top: 40px;
+}
+
+.mgb5 {
+    margin-bottom: 5px;
+}
+
+.mgb10 {
+    margin-bottom: 10px;
+}
+
+.mgb15 {
+    margin-bottom: 15px;
+}
+
+.mgb16 {
+    margin-bottom: 16px;
+}
+
+.mgb20 {
+    margin-bottom: 20px;
+}
+
+.mgb25 {
+    margin-bottom: 25px;
+}
+
+.mgb30 {
+    margin-bottom: 30px;
+}
+
+.mgb50 {
+    margin-bottom: 50px;
+}
+
+.mgl2 {
+    margin-left: 2px;
+}
+
+.mgl5 {
+    margin-left: 5px;
+}
+
+.mgl10 {
+    margin-left: 10px;
+}
+
+.mgl15 {
+    margin-left: 15px;
+}
+
+.mgl16 {
+    margin-left: 16px;
+}
+
+.mgl20 {
+    margin-left: 20px;
+}
+
+.mgl25 {
+    margin-left: 25px;
+}
+
+.mgl30 {
+    margin-left: 30px;
+}
+
+.mgl35 {
+    margin-left: 35px;
+}
+
+.mgl40 {
+    margin-left: 40px;
+}
+
+.mgr5 {
+    margin-right: 5px;
+}
+
+.mgr10 {
+    margin-right: 10px;
+}
+
+.mgr13 {
+    margin-right: 13px;
+}
+
+.mgr15 {
+    margin-right: 15px;
+}
+
+.mgr20 {
+    margin-right: 20px;
+}
+
+.mgr25 {
+    margin-right: 25px;
+}
+
+.mgr30 {
+    margin-right: 30px;
+}
+
+.mgr35 {
+    margin-right: 35px;
+}
+
+.mgr40 {
+    margin-right: 40px;
+}
+
+.mgr45 {
+    margin-right: 45px;
+}
+
+.mgr50 {
+    margin-right: 50px;
+}
+
+/*common font*/
+.font12 {
+    font-size: 12px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.font15 {
+    font-size: 15px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font18 {
+    font-size: 18px;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.font22 {
+    font-size: 22px;
+}
+
+.font23 {
+    font-size: 23px;
+}
+
+.font24 {
+    font-size: 24px;
+}
+
+.font26 {
+    font-size: 26px;
+}
+
+.font25 {
+    font-size: 25px;
+}
+
+.font27 {
+    font-size: 27px;
+}
+
+.font28 {
+    font-size: 28px;
+}
+
+.font30 {
+    font-size: 30px;
+}
+
+/*bold*/
+.bold {
+    font-weight: bold;
+}
+
+/*common fontcolor*/
+.fontA {
+    font-family: "Arial"
+}
+
+.fontW {
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+}
+
+.fontS {
+    font-family: "Source Sans Pro ExtraLight";
+}
+
+.fontBt {
+    font-family: serif;
+}
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ovhidden {
+    overflow: hidden;
+}
+
