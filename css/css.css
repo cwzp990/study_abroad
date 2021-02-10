@@ -363,9 +363,9 @@
     height: 895px;
     position: relative;
     color: #fff;
-    padding-top: 240px;
+    /* padding-top: 240px; */
     box-sizing: border-box;
-    margin-top: -895px;
+    margin-top: -655px;
 }
 
 .hmbanner_p1 {
@@ -392,7 +392,7 @@
 .hmInfo {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 240px;
 }
 
 .hmInfo_item {
