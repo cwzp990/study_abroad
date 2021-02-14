@@ -23,7 +23,12 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
-
+.wxbanner2 {
+    width: 100%;
+    height: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
 .head_lf {
     float: left;
     display: flex;
@@ -73,6 +78,11 @@
     padding-top: 343px;
 }
 
+.wxbanner2_div {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 343px;
+}
 .wxbanner_p1 {
     font-size: 50px;
     text-align: center;
@@ -83,9 +93,15 @@
     font-size: 39px;
     text-align: center;
     color: #fff;
-    margin-top: 5px;
+    margin-top: 10px;
 }
-
+.wxbanner_p3 {
+    
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 15px;
+}
 /*公司介绍*/
 .introCon {
     width: 1200px;
