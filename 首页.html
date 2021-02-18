@@ -134,8 +134,8 @@
     <div class="zsjsCon">
         <p class="enTit">Senior professor</p>
         <p class="chTit">资深教授，为你指点迷津</p>
-        <div class="zsYj">
-            <img src="images/index-teacher.png" class="zs_pic"/>
+        <div class="zsYj" align="center">
+            <img src="images/index-teacher.png"  class="zs_pic"/>
         </div>
     </div>
 </div>
@@ -155,27 +155,36 @@
             <i class="line3"></i>
             <div class="zyfd_li">
                 <p class="zyfd_p1">语言</p>
-                <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p>
+                <p class="zyfd_p2"> </p>
+                <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p> -->
             </div>
             <div class="zyfd_li">
                 <p class="zyfd_p1">商学</p>
-                <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p>
+                <p class="zyfd_p2"> </p>
+
+                <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p> -->
             </div>
             <div class="zyfd_li">
                 <p class="zyfd_p1">历史</p>
-                <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
-                    企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p>
+                <p class="zyfd_p2"> </p>
+
+                <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
+                    企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p> -->
             </div>
-            <div class="zyfd_li">
+            <div class="zyfd_li" style="margin-top: 50px;">
                 <p class="zyfd_p1">科学</p>
-                <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
+                <p class="zyfd_p2"> </p>
+
+                <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
                     企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;
-                </p>
+                </p> -->
             </div>
-            <div class="zyfd_li">
-                <p class="zyfd_p1">艺术</p>
-                <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
-                    企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p>
+            <div class="zyfd_li" style="margin-top: 50px;">
+                <p class="zyfd_p1" >艺术</p>
+                <p class="zyfd_p2"> </p>
+
+                <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
+                    企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p> -->
             </div>
             <div class="zyfd_li">
                 <a href="#" class="zyfd_more"></a>
@@ -279,22 +288,22 @@
         <div class="lxyxBox clearfix">
             <div class="lxy_item">
                 <span class="lxzjl_sp">姓名：</span>
-                <input type="text" class="lxy_txt" value=""/>
+                <input type="text" class="lxy_txt" value="" id="name"/>
             </div>
             <div class="lxy_item">
                 <span class="lxzjl_sp">电话：</span>
-                <input type="text" class="lxy_txt" value=""/>
+                <input type="text" class="lxy_txt" value="" id="phone"/>
             </div>
             <div class="lxy_item">
                 <span class="lxzjl_sp">意向国家：</span>
-                <input type="text" class="lxy_txt" value=""/>
+                <input type="text" class="lxy_txt" value="" id="country"/>
             </div>
             <div class="lxy_item">
                 <span class="lxzjl_sp">意向专业：</span>
-                <input type="text" class="lxy_txt" value=""/>
+                <input type="text" class="lxy_txt" value="" id="major"/>
             </div>
         </div>
-        <a href="#" class="wybmbtn">我要报名</a>
+        <a href="javascript:void(0)" class="wybmbtn" onclick="saveApply()">我要报名</a>
     </div>
 </div>
 <!--内容部分 end-->
@@ -367,8 +376,22 @@
                 $('.swiper-pagination').hide()
             }
         },
-    })
-
+    });
+    function saveApply() {
+           
+           const url="http://106.12.160.17:8080/carwash/main/saveApply?name="+$("#name").val()+"&phone="+$("#phone").val()+"&country="+$("#country").val()+"&major="+$("#major").val()+"";
+   
+           $.ajax({
+               type: "GET",
+               dataType: "json",
+               contentType: 'application/json;charset=utf-8',
+               url: url,
+               success: function(datas){
+                   alert("报名成功");
+                   window.location.reload();
+               }
+           });
+        }
 </script>
 </body>
 </html>

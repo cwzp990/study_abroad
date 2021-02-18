@@ -79,7 +79,7 @@
         <div class="dstd_li">
             <img src="images/teacher2.png" class="zs_pic">
         </div>
-        <div class="dstd_li">
+        <div class="dstd_li" align="center" style="margin-bottom: 30px;">
             <img src="images/teacher3.png" class="zs_pic">
         </div>
         <!-- <div class="dstd_li">
@@ -101,22 +101,22 @@
         <div class="lxyxBox clearfix">
             <div class="lxy_item">
                 <span class="lxzjl_sp">姓名：</span>
-                <input type="text" class="lxy_txt" value=""/>
+                <input type="text" class="lxy_txt" value="" id="name"/>
             </div>
             <div class="lxy_item">
                 <span class="lxzjl_sp">电话：</span>
-                <input type="text" class="lxy_txt" value=""/>
+                <input type="text" class="lxy_txt" value="" id="phone"/>
             </div>
             <div class="lxy_item">
                 <span class="lxzjl_sp">意向国家：</span>
-                <input type="text" class="lxy_txt" value=""/>
+                <input type="text" class="lxy_txt" value="" id="country"/>
             </div>
             <div class="lxy_item">
                 <span class="lxzjl_sp">意向专业：</span>
-                <input type="text" class="lxy_txt" value=""/>
+                <input type="text" class="lxy_txt" value="" id="major"/>
             </div>
         </div>
-        <a href="#" class="wybmbtn">我要报名</a>
+        <a href="javascript:void(0)" class="wybmbtn" onclick="saveApply()">我要报名</a>
     </div>
 </div>
 <!--内容部分 end-->
@@ -168,7 +168,22 @@
 <!--footer end-->
 <script>
     new WOW().init();
+    function saveApply() {
+           
+        const url="http://106.12.160.17:8080/carwash/main/saveApply?name="+$("#name").val()+"&phone="+$("#phone").val()+"&country="+$("#country").val()+"&major="+$("#major").val()+"";
 
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            contentType: 'application/json;charset=utf-8',
+            url: url,
+            success: function(datas){
+                alert("报名成功");
+                window.location.reload();
+            }
+        });
+
+    }
 </script>
 </body>
 </html>
