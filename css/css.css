@@ -23,12 +23,14 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 .wxbanner2 {
     width: 100%;
     height: 100px;
     background-position: center center;
     background-repeat: no-repeat;
 }
+
 .head_lf {
     float: left;
     display: flex;
@@ -83,6 +85,7 @@
     margin: 0 auto;
     padding-top: 343px;
 }
+
 .wxbanner_p1 {
     font-size: 50px;
     text-align: center;
@@ -95,13 +98,15 @@
     color: #fff;
     margin-top: 10px;
 }
+
 .wxbanner_p3 {
-    
+
     font-size: 18px;
     text-align: center;
     color: #FFFFFF;
     margin-top: 15px;
 }
+
 /*公司介绍*/
 .introCon {
     width: 1200px;
@@ -423,6 +428,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .hmInfo_p1 {
@@ -929,13 +935,13 @@
     margin-top: 90px;
 }
 
-
 /* vip */
-.list{
+.list {
     padding-bottom: 20px;
     text-align: center;
 }
-.list .list_block{
+
+.list .list_block {
     display: inline-block;
     width: 188px;
     padding: 20px 10px;
@@ -943,10 +949,12 @@
     height: 300px;
     vertical-align: middle;
 }
-.list .list_block.max-width{
+
+.list .list_block.max-width {
     width: 450px;
 }
-.list .list_block .list_title{
+
+.list .list_block .list_title {
     color: #000;
     font-size: 30px;
     font-weight: bold;
@@ -954,17 +962,138 @@
     margin-bottom: 30px;
 }
 
-.list .list_block .list_content{
+.list .list_block .list_content {
     color: #000;
     font-size: 14px;
     line-height: 2;
     text-align: left;
 }
 
-.list .list_block.red{
+.list .list_block.red {
     background-color: #ea433a;
 }
 
-.list .list_block.red .list_title,.list .list_block.red .list_content{
+.list .list_block.red .list_title, .list .list_block.red .list_content {
     color: #fff;
 }
+
+/** 轮播图swiper **/
+
+.zsyj_swiper .swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    oz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    -ms-transition-property: -ms-transform;
+    transition-property: transform;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.zsyj_swiper .swiper-slide {
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
+    width: 100%;
+    position: relative;
+    height: 895px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.zsyj_swiper .swiper-slide {
+    width: 100%;
+}
+
+.zsyj_swiper .swiper-pagination {
+    bottom: 170px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zsyj_swiper .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background: #767382;
+    margin: 0 3px;
+    border: 1px solid #767382;
+    box-sizing: border-box;
+}
+
+.zsyj_swiper .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    border: 1px solid #cf3e38;
+    background: rgba(0, 0, 0, 0);
+}
+
+/*视频弹窗*/
+.vedio_mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 55555;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+.vedioCon {
+    position: fixed;
+    width: 640px;
+    height: 368px;
+    left: 50%;
+    top: 50%;
+    margin: -250px 0 0 -320px;
+    z-index: 10;
+    display: none;
+}
+
+.vedioCon .video {
+    width: 640px;
+    height: 368px;
+    z-index: 1;
+}
+
+.vd_close {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    margin-left: -34px;
+    height: 68px;
+    width: 68px;
+    background: url("../images/vd_close2.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    z-index: 10;
+    cursor: pointer;
+}
+

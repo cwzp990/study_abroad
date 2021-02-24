@@ -69,11 +69,11 @@
             精准评估学生情况，资深教授导师进行双向选择，拟定个性化VIP高端留学规划，开启留学生活全方位管家服务和顶级导师教学。留学英国的专业知识和数十年的在英生活经验，从留学申请、课程辅导、海外生活、论文指导等各个层面予以精心帮助，聘请英国名校教师团队授课，拥有英国当地名校申请经验，不论年龄，从小学到博士，让名校之梦成为现实，定制属于孩子的高端VIP留学之旅，成就不可思议的未来。</p>
         <a href="#" class="hm_more"></a>
         <div class="hmInfo clearfix">
-            <div class="hmInfo_item">
+            <div class="hmInfo_item active">
                 <p class="hmInfo_p1">20年国际教育</p>
                 <p class="hmInfo_p2">20+</p>
             </div>
-            <div class="hmInfo_item active">
+            <div class="hmInfo_item ">
                 <p class="hmInfo_p1">直录TOP10</p>
                 <p class="hmInfo_p2">99%</p>
             </div>
@@ -134,9 +134,27 @@
     <div class="zsjsCon">
         <p class="enTit">Senior professor</p>
         <p class="chTit">资深教授，为你指点迷津</p>
-        <div class="zsYj" align="center">
-            <img src="images/index-teacher.png"  class="zs_pic"/>
+        <!--修改部分-->
+        <div class="zsYj">
+            <!--swiper begin-->
+            <div class="swiper-container zsyj_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/index-teacher.png" class="zs_pic"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/index-teacher.png" class="zs_pic"/>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!--swiper end-->
         </div>
+        <!--<div class="zsYj" align="center">-->
+        <!---->
+        <!--</div>-->
+        <!--修改部分-->
     </div>
 </div>
 <div class="introAdv">
@@ -155,33 +173,33 @@
             <i class="line3"></i>
             <div class="zyfd_li">
                 <p class="zyfd_p1">语言</p>
-                <p class="zyfd_p2"> </p>
+                <p class="zyfd_p2"></p>
                 <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p> -->
             </div>
             <div class="zyfd_li">
                 <p class="zyfd_p1">商学</p>
-                <p class="zyfd_p2"> </p>
+                <p class="zyfd_p2"></p>
 
                 <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p> -->
             </div>
             <div class="zyfd_li">
                 <p class="zyfd_p1">历史</p>
-                <p class="zyfd_p2"> </p>
+                <p class="zyfd_p2"></p>
 
                 <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
                     企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p> -->
             </div>
             <div class="zyfd_li" style="margin-top: 50px;">
                 <p class="zyfd_p1">科学</p>
-                <p class="zyfd_p2"> </p>
+                <p class="zyfd_p2"></p>
 
                 <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
                     企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;
                 </p> -->
             </div>
             <div class="zyfd_li" style="margin-top: 50px;">
-                <p class="zyfd_p1" >艺术</p>
-                <p class="zyfd_p2"> </p>
+                <p class="zyfd_p1">艺术</p>
+                <p class="zyfd_p2"></p>
 
                 <!-- <p class="zyfd_p2">以从事仓企业能为客户提供配送服务以及商品经销储业务为主，为客户提供货
                     企业自有一定规模的仓储设施、设备，自有或租用必要的货运车辆;</p> -->
@@ -377,21 +395,50 @@
             }
         },
     });
+
     function saveApply() {
-           
-           const url="http://106.12.160.17:8080/carwash/main/saveApply?name="+$("#name").val()+"&phone="+$("#phone").val()+"&country="+$("#country").val()+"&major="+$("#major").val()+"";
-   
-           $.ajax({
-               type: "GET",
-               dataType: "json",
-               contentType: 'application/json;charset=utf-8',
-               url: url,
-               success: function(datas){
-                   alert("报名成功");
-                   window.location.reload();
-               }
-           });
-        }
+
+        const url = "http://106.12.160.17:8080/carwash/main/saveApply?name=" + $("#name").val() + "&phone=" + $("#phone").val() + "&country=" + $("#country").val() + "&major=" + $("#major").val() + "";
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            contentType: 'application/json;charset=utf-8',
+            url: url,
+            success: function (datas) {
+                alert("报名成功");
+                window.location.reload();
+            }
+        });
+    }
+
+    //点击切换
+    $('.hmInfo_item').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+
+    })
+    // 轮播
+    var swiper2 = new Swiper('.zsyj_swiper', {
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     // type: 'fraction',
+        // },
+        // paginationClickable: true,
+        centeredSlides: true,
+        speed: 600,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        autoplayDisableOnInteraction: false,
+        loop: true,
+        onInit: function (swiper) {
+            if (swiper.slides.length <= 3) {
+                swiper.lockSwipes()
+                $('.swiper-pagination').hide()
+            }
+        },
+    });
 </script>
 </body>
 </html>

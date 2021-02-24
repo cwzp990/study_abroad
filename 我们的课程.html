@@ -53,7 +53,7 @@
         <p class="wxbanner_p1">OUR COURSES</p>
         <p class="wxbanner_p2">我们的课程</p>
         <div class="bnwmk">
-            <i class="mk_ico"></i>
+            <i class="mk_ico playBtn"></i>
             <div class="mk_div">
                 <p class="mk_p1">在线课程试听<i class="crile_ico"></i></p>
                 <p class="mk_p2">学科覆盖（此部分需修改补充） 课程包括但不局限于：GCSE、A level、雅思</p>
@@ -202,25 +202,45 @@
     </div>
 </div>
 
+<!--视频弹窗 begin-->
+<div class="gtopicVed">
+    <div class="vedio_mask hide"></div>
+    <div class="vedioCon">
+        <i class="vd_close"></i>
+        <video class="video" src="images/ship.mp4"
+               preload="true"
+               webkit-playsinline="true"
+               x5-video-player-type="h5"
+               x5-video-orientation="portraint"
+               className={styles.video}
+               controls>
+            <!--<source src="../public/image/ship.mp4" type="video/mp4">-->
+        </video>
+    </div>
+
+</div>
+<!--视频弹窗 end-->
 
 <!--footer end-->
 <script>
     new WOW().init();
+
     function saveApply() {
-           
-           const url="http://106.12.160.17:8080/carwash/main/saveApply?name="+$("#name").val()+"&phone="+$("#phone").val()+"&country="+$("#country").val()+"&major="+$("#major").val()+"";
-   
-           $.ajax({
-               type: "GET",
-               dataType: "json",
-               contentType: 'application/json;charset=utf-8',
-               url: url,
-               success: function(datas){
-                   alert("报名成功");
-                   window.location.reload();
-               }
-           });
-        }
+
+        const url = "http://106.12.160.17:8080/carwash/main/saveApply?name=" + $("#name").val() + "&phone=" + $("#phone").val() + "&country=" + $("#country").val() + "&major=" + $("#major").val() + "";
+
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            contentType: 'application/json;charset=utf-8',
+            url: url,
+            success: function (datas) {
+                alert("报名成功");
+                window.location.reload();
+            }
+        });
+    }
+
     var swiper = new Swiper('.spc_swiper', {
         pagination: {
             el: '.swiper-pagination',
@@ -242,7 +262,23 @@
             }
         },
     })
+    // 视频播放
+    $('.playBtn').on('click', function () {
+        video.play();
+        $('.vedio_mask,.vedioCon').show();
+        $('.play_ico').hide();
+    });
+    // 视频播放结束
+    var video = document.querySelector('.video');
+    video.addEventListener("ended", function () {
+        // $('.playBtn').css('display', 'block');
+    })
 
+    $('.vedio_mask,.vd_close').on('click', function () {
+        $('.vedio_mask,.vedioCon').hide();
+        $('.play_ico').show();
+        video.pause();
+    });
 </script>
 </body>
 </html>
