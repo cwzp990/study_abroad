@@ -349,6 +349,10 @@
     padding: 15px 0 0 0;
     margin-left: 15px;
 }
+.er_img{
+    width: 140px;
+    height: 140px;
+}
 
 .ft_rg_p {
     margin-top: 10px;
@@ -377,11 +381,10 @@
 }
 
 .hmbanner_div {
-    position: relative;
     z-index: 10;
     width: 1200px;
     margin: 0 auto;
-    height: 895px;
+    height: 950px;
     position: relative;
     color: #fff;
     /* padding-top: 240px; */
@@ -407,7 +410,10 @@
     height: 45px;
     width: 154px;
     background: url("../images/more_img.png") no-repeat 0 0;
-    margin: 55px 0 0 75px;
+    margin: 300px 0 0 75px;
+    position: absolute;
+    position: absolute;
+    bottom: 500px;
 }
 
 .hmInfo {
@@ -523,6 +529,12 @@
     background: rgba(0, 0, 0, 0);
 }
 
+.hmInfo_item.active .hmInfo_p1{
+    font-size: 20px;
+}
+.hmInfo_item.active .hmInfo_p2{
+    font-size: 40px;
+}
 .hmInfo_item.active:before {
     position: absolute;
     width: 100%;
@@ -650,6 +662,12 @@
     font-size: 12px;
     text-align: center;
     margin-top: 24px;
+}
+.zyfd_p2 p{
+    color: #c1c6ca;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 4px;
 }
 
 .zyfd_p1 {
@@ -856,7 +874,7 @@
 }
 
 .bnwmk {
-    margin-top: 200px;
+    margin-top: 150px;
     display: flex;
 
     justify-content: center;
@@ -910,7 +928,7 @@
     color: #fff;
     font-size: 16px;
     line-height: 26px;
-    text-indent: 2em;
+    /* text-indent: 2em; */
 }
 
 .dstbanner_p1 {
