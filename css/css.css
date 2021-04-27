@@ -64,10 +64,27 @@
 
 .lang {
     position: absolute;
-    right: 15px;
-    top: 50%;
+    right: 20px;
+    top: 40%;
     margin-top: -9px;
     cursor: pointer;
+}
+
+.lang a {
+    position: relative;
+    display: inline-block;
+}
+
+.lang a:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9px solid #fff;
 }
 
 .logo_div {
@@ -151,7 +168,7 @@
     position: absolute;
     left: -1px;
     background: #ea433a;
-    bottom: 0;
+    bottom: -15px;
     height: 4px;
     width: 1000px;
     content: '';
@@ -222,7 +239,7 @@
     padding-left: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     overflow: hidden;
 
 }
@@ -300,6 +317,11 @@
     float: left;
 }
 
+.zz {
+    width: 600px;
+    padding-bottom: 20px;
+}
+
 .ftjsxq {
     float: right;
     height: 100px;
@@ -375,7 +397,7 @@
 /*首页*/
 .hmbanner {
     width: 100%;
-    height: 895px;
+    height: 878px;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -480,7 +502,7 @@
     flex-shrink: 0;
     width: 100%;
     position: relative;
-    height: 895px;
+    height: 878px;
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -754,6 +776,13 @@
     color: #000;
 }
 
+.qfwfw_column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
 .qfwfw_tit {
     font-size: 22px;
     text-align: center;
@@ -777,6 +806,10 @@
 .qfwfw_item2, .qfwfw_item4, .qfwfw_item7, .qfwfw_item9 {
     background: #ea433a;
     color: #fff;
+}
+
+.qfwfw_column.qfwfw_item2, .qfwfw_column.qfwfw_item4, .qfwfw_column.qfwfw_item7, .qfwfw_column.qfwfw_item9 {
+    font-size: 16px;
 }
 
 .qfwfw_item6 .qfwfw_tit, .qfwfw_item7 .qfwfw_tit, .qfwfw_item8 .qfwfw_tit，.qfwfw_item9 .qfwfw_tit {
@@ -959,6 +992,10 @@
     text-align: center;
 }
 
+.list_en {
+    display: flex;
+}
+
 .list .list_block {
     display: inline-block;
     width: 188px;
@@ -966,6 +1003,22 @@
     background-color: #efefef;
     height: 300px;
     vertical-align: middle;
+}
+
+.list .list_block_en {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list .list_block_en:nth-child(2n+1) {
+    font-size: 20px;
+    color: #000;
+}
+
+.list .list_block_en:nth-child(2n) {
+    font-size: 16px;
+    color: #fff;
 }
 
 .list .list_block.max-width {
@@ -993,6 +1046,18 @@
 
 .list .list_block.red .list_title, .list .list_block.red .list_content {
     color: #fff;
+}
+
+.list_content p {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.list_content .list_content_title {
+    color: #ea433a;
+    font-size: 24px;
+    margin-bottom: 0;
 }
 
 /** 轮播图swiper **/
