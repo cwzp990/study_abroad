@@ -58,6 +58,11 @@
     text-align: right;
 }
 
+.head_ul_en .head_li_a {
+    width: auto;
+    padding: 0 15px;
+}
+
 .head_li.active .head_li_a {
     color: #ea433a;
 }
@@ -71,20 +76,7 @@
 }
 
 .lang a {
-    position: relative;
     display: inline-block;
-}
-
-.lang a:after {
-    content: '';
-    position: absolute;
-    top: 12px;
-    right: -15px;
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 9px solid #fff;
 }
 
 .logo_div {
