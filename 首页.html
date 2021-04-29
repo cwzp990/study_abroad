@@ -26,8 +26,8 @@
 <div class="head">
     <div class="head_con clearfix">
         <div class="head_lf">
-            <h1 class="logo_h1"><a href="#"><img src="images/logo.png" class="logo_img"/> </a></h1>
-            <div class="logo_div"><img src="images/logo2.png" class="logo_img2"/></div>
+            <h1 class="logo_h1"><a href="#"><img src="images/logo_en.png" class="logo_img"/> </a></h1>
+            <div class="logo_div"><img src="images/logo2_en.png" class="logo_img2"/></div>
         </div>
         <div class="head_rg clearfix">
             <ul class="head_ul clearfix">
@@ -361,7 +361,7 @@
         <div class="footer_tp clearfix">
             <div class="ft_lf">
                 <div class="ft_lf_tp">
-                    <img src="images/logo.png" class="ft_logo"/><span class="ftlf_sp">圆梦热线：0790-373-2999</span>
+                    <img src="images/logo_en.png" class="ft_logo"/><span class="ftlf_sp">圆梦热线：0790-373-2999</span>
                 </div>
                 <div class="ft_lf_bt clearfix">
                     <div class="ft_bt_js">
@@ -437,8 +437,9 @@
             contentType: 'application/json;charset=utf-8',
             url: url,
             success: function (datas) {
-                layer.msg('报名成功')
-                window.location.reload();
+                layer.msg('报名成功', {}, function() {
+                    window.location.reload();
+                })
             }
         });
     }

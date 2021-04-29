@@ -156,8 +156,9 @@
                contentType: 'application/json;charset=utf-8',
                url: url,
                success: function(datas){
-                   layer.msg('报名成功')
-                   window.location.reload();
+                layer.msg('报名成功', {}, function() {
+                    window.location.reload();
+                })
                }
            });
         }
