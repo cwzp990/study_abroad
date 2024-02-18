@@ -999,7 +999,7 @@
     width: 188px;
     padding: 20px 10px;
     background-color: #efefef;
-    height: 300px;
+    height: 320px;
     vertical-align: middle;
 }
 
@@ -1025,16 +1025,17 @@
 
 .list .list_block .list_title {
     color: #000;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    white-space:nowrap;
 }
 
 .list .list_block .list_content {
     color: #000;
     font-size: 14px;
-    line-height: 2;
+    /* line-height: 2; */
     text-align: left;
 }
 
@@ -1047,7 +1048,7 @@
 }
 
 .list_content p {
-    font-size: 16px;
+    font-size: 15px;
     color: #000;
     margin-bottom: 10px;
 }
