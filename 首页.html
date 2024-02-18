@@ -141,18 +141,43 @@
             <!--swiper begin-->
             <div class="swiper-container zsyj_swiper">
                 <div class="swiper-wrapper">
+                    
                     <div class="swiper-slide">
                         <img src="images/index-teacher.png" class="zs_pic"/>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/teacher1.png" class="zs_pic"/>
-                    </div>
+                      <img src="images/teacher1.png" class="zs_pic"/>
+                  </div>
                     <div class="swiper-slide">
                         <img src="images/teacher2.png" class="zs_pic"/>
                     </div>
                     <div class="swiper-slide">
                         <img src="images/teacher3.png" class="zs_pic"/>
                     </div>
+                    <div class="swiper-slide">
+                      <img src="images/teacher4.png" class="zs_pic"/>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/teacher5.png" class="zs_pic"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/teacher6.png" class="zs_pic"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/teacher7.png" class="zs_pic"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/teacher8.png" class="zs_pic"/>
+          </div>
+          <div class="swiper-slide">
+            <img src="images/teacher9.png" class="zs_pic"/>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/teacher10.png" class="zs_pic"/>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/teacher11.png" class="zs_pic"/>
+    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -361,22 +386,21 @@
         <div class="footer_tp clearfix">
             <div class="ft_lf">
                 <div class="ft_lf_tp">
-                    <img src="images/logo_en.png" class="ft_logo"/><span class="ftlf_sp">圆梦热线：0790-373-2999</span>
+                    <img src="images/logo_en.png" class="ft_logo"/><span class="ftlf_sp">圆梦热线：0044-7903732999</span>
                 </div>
                 <div class="ft_lf_bt clearfix">
-                    <div class="ft_bt_js">
-                        <span class="ftbt_sp left">公司全称以及介绍：上海英熠盛信息咨询服务有限公司</span>
+                    <div class="ft_bt_jss" width="700px">
                         <span class="ftbt_sp left">海外合作邮箱：hanjing0928@hotmail.com</span>
-                        <span class="ftbt_sp left">中国总部：上海宝山市常建路199号9幢</span>
-
-                        <span class="ft_jtnr"></span>
+                        <span class="ftbt_sp left" >总部地址：Suite G04 1 Quality Court, Chancery Lane, London, England, WC2A 1HR</span>
+                                                             
+                        <!-- <span class="ft_jtnr"></span> -->
                     </div>
-                    <div class="ftjsxq">
+                    <!-- <div class="ftjsxq">
                         <span class="ftjsxq_sp"><a href="#" class="ft_ab">关于我们</a></span>
                         <span class="ftjsxq_sp"><a href="#" class="ft_ab">发展合作</a></span>
                         <span class="ftjsxq_sp"><a href="#" class="ft_ab">资料下载</a></span>
                         <span class="ftjsxq_sp"><a href="#" class="ft_ab">联系我们</a></span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="ft_rg">
@@ -429,8 +453,7 @@
 
     function saveApply() {
 
-        const url = "http://120.53.104.37:8091/carwash/main/saveApply?name=" + $("#name").val() + "&phone=" + $("#phone").val() + "&country=" + $("#country").val() + "&major=" + $("#major").val() + "";
-
+        const url = "http://47.108.214.151/jeecg-boot/main/saveApply?name=" + $("#name").val() + "&phone=" + $("#phone").val() + "&country=" + $("#country").val() + "&major=" + $("#major").val() + "";
         $.ajax({
             type: "GET",
             dataType: "json",

@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul,
+li,
+p,
+br {
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+}
+
+i {
+    font-style: normal;
+}
+
+:focus {
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+a,
+li,
+button,
+label,
+input,
+select {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: "微软雅黑", "Helvetica Neue", "Arial", "Hiragino Sans GB", "PingFang SC", "Heiti SC", "STHeiti", "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "Droid Sans Fallback", "sans-serif";
+    border: 0;
+}
+
+::placeholder {
+    color: #999;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: "微软雅黑", "Helvetica Neue", "Arial", "Hiragino Sans GB", "PingFang SC", "Heiti SC", "STHeiti", "Microsoft Yahei", "Source Han Sans SC", "Noto Sans CJK SC", "Droid Sans Fallback", "sans-serif";
+    font-size: .24rem;
+    margin: 0 auto;
+}

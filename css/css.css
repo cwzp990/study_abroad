@@ -308,7 +308,13 @@
     padding-top: 20px;
     float: left;
 }
-
+.ft_bt_jss {
+  color: #a9acaf;
+  font-size: 14px;
+  width: 708px;
+  padding-top: 20px;
+  float: left;
+}
 .zz {
     width: 600px;
     padding-bottom: 20px;
